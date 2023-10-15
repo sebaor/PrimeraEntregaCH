@@ -4,17 +4,13 @@ while(ingresoInvalido){
     let nombreDeusuario = prompt("Ingrese su nombre de usuario para iniciar sesion");
     if(nombreDeusuario !=""){
         alert("¡Bienvenid@ a PayDay " + nombreDeusuario +"!");
+        alert("En PayDay nos dedicamos a liquidar sueldos nominales en $");
         ingresoInvalido = false;
     }else{
         alert("Campos vacíos");
-        break;
     }
 }
-if(ingresoInvalido == true){
-    alert("Vuelve a intentarlo por favor");
-}else{
-    alert("En PayDay nos dedicamos a liquidar sueldos nominales en $");
-}
+
 
 //funcion para calcular descuentos de sueldos nominales
 function calcularSueldo (sueldoNominal, descuentoMontepio = 0.15, descuentoFRL = 0.010, descuentoFonasa = 0.045){
