@@ -25,12 +25,19 @@ while(confirmacionDeusuario){
     let ingresoDesueldo = parseFloat(prompt("Ingrese por favor un sueldo en $ nominales"));
     let sueldoLiquido = calcularSueldo (ingresoDesueldo);
     alert("Su sueldo liquido a cobrar es de: $" + sueldoLiquido);
-    let respuestaconfirmacionDeusuario = prompt("¿Desea calcular otro sueldo? | Ingrese SI o NO");
-    if(respuestaconfirmacionDeusuario == "NO"){
-        confirmacionDeusuario = false;
+    let respuestaconfirmacionDeusuario = prompt("¿Desea calcular otro sueldo? | Ingrese Si o No");
+    if(validarRta(respuestaconfirmacionDeusuario, "no") == true){
+        alert("¡Vuelve pronto!")
+        continuaCiclo = "no";
     }
 }
 
-if(confirmacionDeusuario == false){
-    alert("Vuelve pronto");
+//Funcion para validar la respuesta del usuario
+function validarRta(respuesta, textoValidar){
+    if(respuesta.toLowerCase() == textoValidar){
+        return true;
+    }
+        return false;
 }
+
+let continuaCiclo = "si";
