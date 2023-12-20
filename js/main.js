@@ -2,7 +2,7 @@ let ingresoInvalido = true;
 
 while(ingresoInvalido){
     let nombreDeusuario = prompt("Ingrese su nombre de usuario para iniciar sesion");
-    if(nombreDeusuario !=""){
+    if(nombreDeusuario != "" && nombreDeusuario != "1"){
         alert("¡Bienvenid@ a PayDay " + nombreDeusuario +"!");
         alert("En PayDay nos dedicamos a liquidar sueldos nominales en $");
         ingresoInvalido = false;
@@ -28,8 +28,8 @@ while(confirmacionDeusuario){
         ingresoDesueldo = parseFloat(prompt("Ingrese por favor un sueldo en $ nominales"));
     }
     let sueldoLiquido = calcularSueldo (ingresoDesueldo);
-    alert("Su sueldo liquido a cobrar es de: $" + sueldoLiquido);
-    let respuestaconfirmacionDeusuario = prompt("¿Desea calcular otro sueldo? | Ingrese Si o No");
+    alert("Su sueldo liquido a cobrar es de: $" + sueldoLiquido + " aproximadamente");
+    let respuestaconfirmacionDeusuario = prompt("¿Desea calcular otro sueldo nominal? | Ingrese Si o No");
     if(validarRta(respuestaconfirmacionDeusuario, "no") == true){
         alert("¡Vuelve pronto!")
         continuaCiclo = "no";
