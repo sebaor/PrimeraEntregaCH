@@ -13,10 +13,10 @@ while(ingresoInvalido){
 
 
 //funcion para calcular descuentos de sueldos nominales;
-function calcularSueldo (sueldoNominal, descuentoMontepio = 0.15, descuentoFRL = 0.010, descuentoFonasa = 0.045){
+function calcularSueldo (sueldoNominal, descuentoMontepio = 0.15, descuentoFRL = 0.10, descuentoFonasa = 0.045){
     let descuentosTotales = sueldoNominal * descuentoMontepio + sueldoNominal * descuentoFRL + sueldoNominal * descuentoFonasa;
     alert("El descuento es de: $" + descuentosTotales);
-    return sueldoNominal - descuentosTotales;
+    return Math.ceil(sueldoNominal - descuentosTotales); 
 }
 
 let confirmacionDeusuario = true;
