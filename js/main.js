@@ -29,7 +29,7 @@ while(confirmacionDeusuario){
     let ingresoDesueldo;
     //Funcion para verificar si el usuario ingreso un número correcto y no un NaN;
     while(isNaN(ingresoDesueldo) == true){
-        ingresoDesueldo = parseFloat(prompt("Ingrese por favor un sueldo en $ nominales"));
+        ingresoDesueldo = parseInt(prompt("Ingrese por favor un sueldo en $ nominales"));
     }
     let sueldoLiquido = calcularSueldo (ingresoDesueldo);
     alert("Su sueldo liquido a cobrar es de: $" + sueldoLiquido + " aproximadamente");
