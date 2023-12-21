@@ -1,13 +1,17 @@
 let ingresoInvalido = true;
+const formatoNombre = /^[A-Z][a-z]+$/;
 
-while(ingresoInvalido){
-    let nombreDeusuario = prompt("Ingrese su nombre de usuario para iniciar sesion");
-    if(nombreDeusuario != "" && nombreDeusuario != "1"){
-        alert("¡Bienvenid@ a PayDay " + nombreDeusuario +"!");
+while (ingresoInvalido) {
+    let nombreDeUsuario = prompt("Ingrese su nombre de usuario");
+
+    if (nombreDeUsuario !== null && nombreDeUsuario.match(formatoNombre)) {
+        alert("¡Bienvenid@ a PayDay " + nombreDeUsuario + "!");
         alert("En PayDay nos dedicamos a liquidar sueldos nominales en $");
         ingresoInvalido = false;
-    }else{
-        alert("Campos vacíos");
+    } else if (nombreDeUsuario === null) {
+        alert("Has cancelado, por favor ingresa un nombre válido.");
+    } else {
+        alert("Por favor, ingresa un nombre válido (formato ejemplo: Facundo).");
     }
 }
 
